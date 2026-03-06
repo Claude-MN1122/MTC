@@ -1,0 +1,333 @@
+@import "tailwindcss";
+
+/* ============================================
+   MTC CAMPUS SYSTEM - CUSTOM THEME
+   Premium SaaS Dashboard Design
+   ============================================ */
+
+:root {
+  /* =========================================
+     COLOR PALETTE - STRICT ENFORCEMENT
+     ========================================= */
+  
+  /* Backgrounds */
+  --background: #FFFFFF;
+  --surface: #F8FAFC;
+  --surface-elevated: #FFFFFF;
+  --surface-hover: #F1F5F9;
+  
+  /* Brand Blue - Primary */
+  --primary-50: #EFF6FF;
+  --primary-100: #DBEAFE;
+  --primary-200: #BFDBFE;
+  --primary-300: #93C5FD;
+  --primary-400: #60A5FA;
+  --primary-500: #3B82F6;
+  --primary-600: #2563EB;
+  --primary-700: #1D4ED8;
+  --primary-800: #1E40AF;
+  --primary-900: #1E3A8A;
+  
+  /* Accent Gold - Sparingly Used */
+  --gold-50: #FFFBEB;
+  --gold-100: #FEF3C7;
+  --gold-200: #FDE68A;
+  --gold-300: #FCD34D;
+  --gold-400: #FBBF24;
+  --gold-500: #F59E0B;
+  --gold-600: #D97706;
+  --gold-700: #B45309;
+  
+  /* Text Colors */
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --text-inverse: #FFFFFF;
+  
+  /* Border Colors */
+  --border-light: #F1F5F9;
+  --border-medium: #E2E8F0;
+  --border-strong: #CBD5E1;
+  
+  /* Status Colors */
+  --success-50: #ECFDF5;
+  --success-500: #10B981;
+  --success-700: #047857;
+  --warning-50: #FFFBEB;
+  --warning-500: #F59E0B;
+  --warning-700: #B45309;
+  --error-50: #FEF2F2;
+  --error-500: #EF4444;
+  --error-700: #B91C1C;
+  --info-50: #EFF6FF;
+  --info-500: #3B82F6;
+  --info-700: #1D4ED8;
+  
+  /* Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Typography */
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-jakarta: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Spacing */
+  --header-height: 64px;
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 80px;
+}
+
+@theme inline {
+  /* Color mappings for Tailwind */
+  --color-background: var(--background);
+  --color-foreground: var(--text-primary);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  
+  /* Primary Blue */
+  --color-primary-50: var(--primary-50);
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-600);
+  --color-primary-700: var(--primary-700);
+  --color-primary-800: var(--primary-800);
+  --color-primary-900: var(--primary-900);
+  
+  /* Accent Gold */
+  --color-gold-50: var(--gold-50);
+  --color-gold-100: var(--gold-100);
+  --color-gold-200: var(--gold-200);
+  --color-gold-300: var(--gold-300);
+  --color-gold-400: var(--gold-400);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
+  --color-gold-700: var(--gold-700);
+  
+  /* Text */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  
+  /* Borders */
+  --color-border-light: var(--border-light);
+  --color-border-medium: var(--border-medium);
+  --color-border-strong: var(--border-strong);
+  
+  /* Status */
+  --color-success: var(--success-500);
+  --color-warning: var(--warning-500);
+  --color-error: var(--error-500);
+  --color-info: var(--info-500);
+  
+  /* Fonts */
+  --font-family-sans: var(--font-inter);
+  --font-family-display: var(--font-jakarta);
+  
+  /* Shadows */
+  --shadow-custom-xs: var(--shadow-xs);
+  --shadow-custom-sm: var(--shadow-sm);
+  --shadow-custom-md: var(--shadow-md);
+  --shadow-custom-lg: var(--shadow-lg);
+  --shadow-custom-xl: var(--shadow-xl);
+  --shadow-custom-2xl: var(--shadow-2xl);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+
+.text-display {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.text-h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.text-h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.text-h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.text-h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.text-body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-small {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.text-caption {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ============================================
+   ANIMATIONS & TRANSITIONS
+   ============================================ */
+
+.transition-default {
+  transition: all 0.2s ease;
+}
+
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-bounce {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hover-scale {
+  transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #F1F5F9 0%,
+    #E2E8F0 50%,
+    #F1F5F9 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--border-medium);
+  border-top-color: var(--primary-500);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   SCROLLBAR CUSTOMIZATION
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-600) 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, var(--gold-400) 0%, var(--gold-500) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-700) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
