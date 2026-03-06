@@ -1,0 +1,37 @@
+Username (leave blank to use 'claude'): mtc
+Email address: mtc@gmail.com
+Password: mtc123
+Password (again): mtc123
+Error: Your passwords didn't match.
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+
+Email: admin@mtc.ac.zw
+Full name: Admin
+Password: admin123
+Password (again): admin123
+Error: Your passwords didn't match.
+Password: 
+Password (again): 
+The password is too similar to the email.
+This password is too common.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+The frontend is fully 
+implemented and ready for backend API integration with Django REST Framework.
+
+(venv) PS C:\Users\CLAUDE\Documents\MTC\mtc-campus-system\backend> python manage.py createsuperuser
+Email: admin@mtc.ac.zw
+Error: That email is already taken.
+Email: newadmin@mtc
+Error: Enter a valid email address.
+Email: newadmin@mtc.ac.zw
+Full name: newadmin
+Password: admin234
+Password (again): admin234
+Superuser created successfully.
